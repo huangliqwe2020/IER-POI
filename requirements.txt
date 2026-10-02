@@ -1,0 +1,20 @@
+# Versions used for the reported MMPOI-NYC reproduction and IER stage-1 run.
+torch==2.5.1+cu118
+torchvision==0.20.1+cu118
+torchaudio==2.5.1+cu118
+numpy==2.1.2
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+networkx==3.3
+PyYAML==6.0.3
+tqdm==4.67.1
+matplotlib==3.10.7
+Pillow==11.3.0
+transformers==4.24.0
+huggingface-hub==0.36.2
+requests==2.32.5
+gdown==6.1.0
+python-geohash==0.8.5
+duckdb==1.4.1
+lmdb==1.7.5

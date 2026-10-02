@@ -1,0 +1,103 @@
+{
+  "dataset": "Amazon Reviews 2023 Musical_Instruments official 5-core",
+  "interactions": {
+    "rows": 511836,
+    "users": 57439,
+    "items": 24587,
+    "duplicate_user_item_rows": 0,
+    "min_timestamp": 1053991604000,
+    "max_timestamp": 1693746359863,
+    "mean_rating": 4.43905665095851
+  },
+  "sequence": {
+    "min_len": 5,
+    "mean_len": 8.910949006772402,
+    "median_len": 7,
+    "p90_len": 15,
+    "max_len": 288,
+    "users_10plus": 14558,
+    "users_20plus": 3095
+  },
+  "metadata_all": {
+    "rows": 213593,
+    "items": 213593,
+    "with_images": 213487,
+    "with_2plus_images": 154259,
+    "with_5plus_images": 96457,
+    "mean_images": 4.242147448652344,
+    "median_images": 4,
+    "with_features": 176981,
+    "with_description": 152734,
+    "with_details": 210339
+  },
+  "used_item_evidence": {
+    "items": 24587,
+    "joined_metadata": 24587,
+    "with_images": 24580,
+    "with_2plus_images": 19677,
+    "with_5plus_images": 12833,
+    "with_catalog_text": 24568,
+    "multimodal_multi_evidence": 19662,
+    "mean_images": 4.708260462846219,
+    "median_images": 5,
+    "max_images": 51
+  },
+  "exact_url_redundancy": {
+    "items_with_images": 24580,
+    "items_with_exact_duplicate_urls": 772,
+    "duplicate_url_units": 1037
+  },
+  "ugc_exact_match": {
+    "source_url": "https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023/resolve/main/raw/review_categories/Musical_Instruments.jsonl?download=true",
+    "expected_exact_5core_rows": 511836,
+    "matched_rows": 511836,
+    "distinct_exact_keys": 511836,
+    "rows_with_text": 511698,
+    "rows_with_images": 28577,
+    "image_units": 57331,
+    "missing_exact_rows": 0,
+    "items_with_text_reviews": 24587,
+    "items_with_review_images": 11374,
+    "duplicate_rows_removed": 3724,
+    "recovered_rows": 3724,
+    "output": "/home/honsen/work1/recommendation/ier_repro/data/raw/amazon_reviews_2023/musical_instruments/reviews_5core_exact.jsonl.gz",
+    "output_bytes": 85103381,
+    "decision": "GO"
+  },
+  "image_url_audit": {
+    "catalog": {
+      "sample": 100,
+      "reachable_images": 100,
+      "reachability": 1.0,
+      "http_codes": {
+        "206": 100
+      }
+    },
+    "ugc_review": {
+      "sample": 100,
+      "reachable_images": 100,
+      "reachability": 1.0,
+      "http_codes": {
+        "206": 100
+      }
+    }
+  },
+  "decision": {
+    "catalog_and_interactions": "GO",
+    "hard_checks": {
+      "users_ge_1000": true,
+      "items_ge_300": true,
+      "interactions_ge_30000": true,
+      "metadata_join_ge_95pct": true,
+      "multimodal_multi_evidence_ge_50pct": true,
+      "ugc_exact_keys_complete": true,
+      "ugc_text_ge_95pct": true,
+      "catalog_image_url_ge_90pct": true,
+      "ugc_image_url_ge_90pct": true
+    },
+    "multimodal_multi_evidence_coverage": 0.7996908935616382,
+    "ugc_review_text_pending": false,
+    "image_url_reachability_pending": false,
+    "final": "GO"
+  }
+}

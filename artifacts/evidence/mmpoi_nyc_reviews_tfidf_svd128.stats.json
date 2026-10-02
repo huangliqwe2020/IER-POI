@@ -1,0 +1,24 @@
+{
+  "source": "/home/honsen/work1/recommendation/ier_repro/data/raw/mmpoi/nyc_raw/NYC/review_summary.json",
+  "node_file": "/home/honsen/work1/recommendation/ier_repro/data/raw/mmpoi/nyc_processed/NYC/graph_X.csv",
+  "output": "/home/honsen/work1/recommendation/ier_repro/artifacts/evidence/mmpoi_nyc_reviews_tfidf_svd128.npz",
+  "text_index": "/home/honsen/work1/recommendation/ier_repro/artifacts/evidence/mmpoi_nyc_reviews_tfidf_svd128.reviews.jsonl.gz",
+  "num_pois": 4618,
+  "pois_with_evidence": 3933,
+  "coverage": 0.8516673884798615,
+  "raw_nonempty_reviews": 105655,
+  "exact_duplicates_removed": 142,
+  "selected_reviews": 53989,
+  "max_evidence_per_poi": 20,
+  "embedding_dim": 128,
+  "tfidf_features": 50000,
+  "svd_explained_variance": 0.11456475406885147,
+  "count_percentiles": {
+    "0": 0.0,
+    "25": 2.0,
+    "50": 15.0,
+    "75": 20.0,
+    "90": 20.0,
+    "100": 20.0
+  }
+}

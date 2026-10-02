@@ -1,0 +1,48 @@
+# Datasets and generated model outputs are intentionally not redistributed.
+data/raw/**
+data/processed/**
+runs/**
+vendor/**
+
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Keep compact, machine-readable experiment reports, but not evidence tensors.
+artifacts/**
+!artifacts/.gitkeep
+!artifacts/baselines/
+!artifacts/baselines/*.json
+!artifacts/data_audit/
+!artifacts/data_audit/*.json
+!artifacts/data_audit/*.md
+!artifacts/evidence/
+!artifacts/evidence/*.stats.json
+!artifacts/results/
+!artifacts/results/*.json
+
+# Third-party source snapshots are committed, but their nested Git metadata,
+# local data link, and generated caches are not.
+third_party/**/.git/
+third_party/MMPOI/NYC
+# RecBole was audited but is not part of the reported execution path. Keep its
+# pinned revision in docs/SOURCE_LOCK.md instead of vendoring the full project.
+third_party/RecBole/
+
+**/__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.idea/
+.vscode/
+.DS_Store
+
+# Local archives/checkpoints.
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.tgz
+*.tar.gz
+*.part

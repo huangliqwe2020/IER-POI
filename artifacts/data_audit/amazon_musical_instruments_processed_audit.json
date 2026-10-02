@@ -1,0 +1,90 @@
+{
+  "dataset": "Amazon Reviews 2023 Musical_Instruments official 5-core",
+  "integrity": {
+    "interactions": 511836,
+    "users": 57439,
+    "items": 24587,
+    "train": 396958,
+    "validation": 57439,
+    "test": 57439,
+    "validation_users": 57439,
+    "test_users": 57439,
+    "cold_eval_interactions": 168,
+    "minimum_train_interactions_per_user": 3,
+    "chronology_violations": 0,
+    "users_with_boundary_timestamp_ties": 6,
+    "repeated_user_item_pairs": 0,
+    "extra_interactions_in_repeated_pairs": 0
+  },
+  "review_evidence": {
+    "rows": 511836,
+    "distinct_evidence_ids": 511836,
+    "distinct_exact_keys": 511836,
+    "rows_with_text": 511698,
+    "rows_with_images": 28577,
+    "eligibility_rule": "e.item_idx=t.item_idx AND e.timestamp<t.timestamp AND e.author_user_idx<>t.user_idx"
+  },
+  "eval_prior_evidence_availability": [
+    {
+      "x_label": 1,
+      "warm_item": true,
+      "targets": 57377,
+      "has_at_least_1_prior_review": 55668,
+      "has_at_least_2_prior_reviews": 53772,
+      "has_at_least_5_prior_reviews": 46744,
+      "has_prior_ugc_image": 28285,
+      "mean_prior_reviews": 86.03637345974867,
+      "median_prior_reviews": 19.0,
+      "p90_prior_reviews": 207.0,
+      "max_prior_reviews": 2442
+    },
+    {
+      "x_label": 1,
+      "warm_item": false,
+      "targets": 62,
+      "has_at_least_1_prior_review": 46,
+      "has_at_least_2_prior_reviews": 32,
+      "has_at_least_5_prior_reviews": 3,
+      "has_prior_ugc_image": 8,
+      "mean_prior_reviews": 1.8548387096774193,
+      "median_prior_reviews": 2.0,
+      "p90_prior_reviews": 4.0,
+      "max_prior_reviews": 6
+    },
+    {
+      "x_label": 2,
+      "warm_item": true,
+      "targets": 57333,
+      "has_at_least_1_prior_review": 55898,
+      "has_at_least_2_prior_reviews": 54280,
+      "has_at_least_5_prior_reviews": 47538,
+      "has_prior_ugc_image": 31338,
+      "mean_prior_reviews": 88.57178239408368,
+      "median_prior_reviews": 20.0,
+      "p90_prior_reviews": 214.0,
+      "max_prior_reviews": 2445
+    },
+    {
+      "x_label": 2,
+      "warm_item": false,
+      "targets": 106,
+      "has_at_least_1_prior_review": 91,
+      "has_at_least_2_prior_reviews": 74,
+      "has_at_least_5_prior_reviews": 10,
+      "has_prior_ugc_image": 22,
+      "mean_prior_reviews": 2.4716981132075473,
+      "median_prior_reviews": 2.5,
+      "p90_prior_reviews": 4.0,
+      "max_prior_reviews": 6
+    }
+  ],
+  "eval_catalog_coverage": {
+    "items": 21014,
+    "with_at_least_1_image": 21007,
+    "with_at_least_2_images": 17156,
+    "with_at_least_5_images": 11404,
+    "with_text": 21014,
+    "with_text_and_at_least_2_images": 17156
+  },
+  "decision": "GO"
+}

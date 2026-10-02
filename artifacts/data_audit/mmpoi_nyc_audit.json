@@ -1,0 +1,44 @@
+{
+  "dataset": "MMPOI NYC official processed + raw",
+  "train_rows": 93147,
+  "test_rows": 21987,
+  "train_users": 1080,
+  "test_users": 1080,
+  "train_pois": 4618,
+  "test_pois": 4083,
+  "train_trajectories": 25387,
+  "test_trajectories": 7159,
+  "cold_test_pois": 19,
+  "images": {
+    "units": 45226,
+    "pois_with_1plus": 3586,
+    "pois_with_2plus": 3428,
+    "pois_with_5plus": 3183,
+    "min": 0,
+    "median": 14.0,
+    "mean": 9.793417063663924,
+    "max": 16
+  },
+  "reviews": {
+    "units": 105432,
+    "pois_with_1plus": 3933,
+    "pois_with_2plus": 3529,
+    "pois_with_5plus": 3038,
+    "min": 0,
+    "median": 15.0,
+    "mean": 22.830662624512776,
+    "max": 50
+  },
+  "aggregated_embedding_coverage": {
+    "image": 4618,
+    "review": 4618,
+    "meta": 4618
+  },
+  "graph_files": {
+    "graph_A.csv": 533148100,
+    "graph_X.csv": 517614,
+    "geo_graph_A.csv": 28408900,
+    "geo_graph_X.csv": 10740
+  },
+  "decision": "GO"
+}

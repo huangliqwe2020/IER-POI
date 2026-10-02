@@ -1,0 +1,17 @@
+{
+  "source_url": "https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023/resolve/main/raw/review_categories/Musical_Instruments.jsonl?download=true",
+  "expected_exact_5core_rows": 511836,
+  "matched_rows": 511836,
+  "distinct_exact_keys": 511836,
+  "rows_with_text": 511698,
+  "rows_with_images": 28577,
+  "image_units": 57331,
+  "missing_exact_rows": 0,
+  "items_with_text_reviews": 24587,
+  "items_with_review_images": 11374,
+  "duplicate_rows_removed": 3724,
+  "recovered_rows": 3724,
+  "output": "/home/honsen/work1/recommendation/ier_repro/data/raw/amazon_reviews_2023/musical_instruments/reviews_5core_exact.jsonl.gz",
+  "output_bytes": 85103381,
+  "decision": "GO"
+}

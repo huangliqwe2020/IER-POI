@@ -1,0 +1,115 @@
+{
+  "dataset": "McAuley-Lab/Amazon-Reviews-2023: All_Beauty",
+  "raw_reviews": {
+    "rows": 701528,
+    "users": 631986,
+    "parent_items": 112565,
+    "variants": 115709,
+    "duplicate_user_item_rows": 7599,
+    "min_timestamp": 973052658000,
+    "max_timestamp": 1694219976666,
+    "rows_with_text": 700808,
+    "rows_with_review_images": 59684,
+    "review_image_units": 107122,
+    "verified_rows": 634969
+  },
+  "metadata": {
+    "rows": 112590,
+    "parent_items": 112590,
+    "items_with_title": 112578,
+    "items_with_features": 17377,
+    "items_with_description": 19162,
+    "items_with_details": 108078,
+    "items_with_images": 112590,
+    "items_with_2plus_images": 88193,
+    "items_with_5plus_images": 65269,
+    "mean_product_images": 4.87795541344702,
+    "median_product_images": 6,
+    "max_product_images": 22
+  },
+  "official_5core_last_out": {
+    "train": {
+      "interactions": 2029,
+      "users": 253,
+      "items": 341,
+      "min_timestamp": 1544671031249,
+      "max_timestamp": 1648410905868
+    },
+    "valid": {
+      "interactions": 253,
+      "users": 253,
+      "items": 168,
+      "min_timestamp": 1583263765628,
+      "max_timestamp": 1664990408638
+    },
+    "test": {
+      "interactions": 253,
+      "users": 253,
+      "items": 138,
+      "min_timestamp": 1592013186706,
+      "max_timestamp": 1678171704867
+    },
+    "union": {
+      "interactions": 2535,
+      "users": 253,
+      "items": 356
+    },
+    "chronology_violations": 0
+  },
+  "k_core": {
+    "2": {
+      "interactions": 57127,
+      "users": 22634,
+      "items": 12105,
+      "iterations": 15
+    },
+    "3": {
+      "interactions": 8978,
+      "users": 1244,
+      "items": 1463,
+      "iterations": 20
+    },
+    "5": {
+      "interactions": 2535,
+      "users": 253,
+      "items": 356,
+      "iterations": 18
+    }
+  },
+  "interaction_item_evidence": {
+    "interacted_items": 112565,
+    "with_product_images": 112565,
+    "with_2plus_product_images": 88171,
+    "with_2plus_text_reviews": 64940,
+    "with_ugc_review_images": 27243,
+    "with_multimodal_multi_evidence": 52172,
+    "with_catalog_and_ugc_text": 63472,
+    "mean_reviews_per_item": 6.2322036156887135,
+    "median_reviews_per_item": 2,
+    "max_reviews_per_item": 1962
+  },
+  "official_5core_item_evidence": {
+    "items": 356,
+    "items_joined_to_raw": 356,
+    "with_product_images": 356,
+    "with_2plus_product_images": 344,
+    "with_2plus_text_reviews": 356,
+    "with_ugc_review_images": 338,
+    "with_multimodal_multi_evidence": 344
+  },
+  "leakage": {
+    "target_review_leakage_if_full_pool_used": true,
+    "future_review_leakage_if_full_pool_used": true,
+    "required_policy": "For a target (user, item, t), candidate UGC may only contain reviews with timestamp < t; exclude the target user's review. Catalog evidence is retained but treated as a static snapshot limitation."
+  },
+  "decision": {
+    "official_5core": "NO-GO",
+    "official_5core_reasons": [
+      "official 5-core has only 253 users (<1000)",
+      "official 5-core has only 2535 interactions (<30000)"
+    ],
+    "raw_data_for_custom_core_audit": "GO",
+    "image_url_reachability_pending": true,
+    "final_dataset_decision": "PENDING_IMAGE_URL_AUDIT"
+  }
+}

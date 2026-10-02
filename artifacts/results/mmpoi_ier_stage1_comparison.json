@@ -1,0 +1,22 @@
+{
+  "baseline_checkpoint": "runs/mmpoi/nyc_fixed_seed618/checkpoints/best_epoch.state.pt",
+  "ier_checkpoint": "runs/mmpoi_ier/evidence_adapter_5ep/checkpoints/best_epoch.state.pt",
+  "training": {
+    "strategy": "freeze_reproduced_baseline_train_evidence_adapter",
+    "epochs": 5,
+    "seed": 618,
+    "device": "cuda:0",
+    "evidence_lr": 0.001
+  },
+  "metrics": {
+    "HR@1": {"baseline": 0.1823336693548387, "ier": 0.18263415012406947, "delta": 0.00030048076923078204},
+    "HR@5": {"baseline": 0.5009402140198511, "ier": 0.5034216035980149, "delta": 0.002481389578163795},
+    "HR@10": {"baseline": 0.625426488833747, "ier": 0.625426488833747, "delta": 0.0},
+    "HR@20": {"baseline": 0.7002558933002482, "ier": 0.7002558933002482, "delta": 0.0},
+    "mAP@20": {"baseline": 0.31703574630967724, "ier": 0.3173703480377657, "delta": 0.00033460172808846833},
+    "NDCG@20": {"baseline": 0.40556779620002775, "ier": 0.4058318824383187, "delta": 0.00026408623829093925},
+    "MRR": {"baseline": 0.31946851058888986, "ier": 0.31980183630029935, "delta": 0.0003333257114094823}
+  },
+  "robustness_summary": "artifacts/results/mmpoi_ier_robustness.json",
+  "interpretation": "safe_small_gain_not_final_claim"
+}

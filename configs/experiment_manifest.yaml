@@ -1,0 +1,62 @@
+project: IER-POI
+method: Interest-aware Evidence-robust Recommendation for POI
+seed: 618
+
+environment:
+  python: 3.10.19
+  torch: 2.5.1+cu118
+  torchvision: 0.20.1+cu118
+  numpy: 2.1.2
+  pandas: 2.3.3
+  scipy: 1.15.3
+  scikit_learn: 1.7.2
+
+dataset:
+  name: MMPOI-NYC
+  processed_sha256: 3998e67a1572dc7d368df17de6b94c399cbd0b3eb46f12c7e2fa55642150baca
+  raw_sha256: 24591ecd81b9fcb53d76b1e918ebb4124a7d96b06fb5241b59d4bfda85e623e9
+  train_rows: 93147
+  test_rows: 21987
+  train_pois: 4618
+  evidence_pois: 3933
+  selected_reviews: 53989
+
+mmpoi_baseline:
+  upstream_commit: 32f9c76e8768af3b268f0c95679bb7e0c739f766
+  epochs: 200
+  batch_size: 256
+  learning_rate: 0.0001
+  weight_decay: 0.0005
+  poi_embedding_dim: 128
+  multimodal_embedding_dim: 128
+  transformer_layers: 2
+  transformer_heads: 2
+  transformer_hidden_dim: 1024
+  early_stop_patience: 5
+
+ier_stage1:
+  initialization: mmpoi_baseline_best_epoch_32
+  freeze_baseline: true
+  epochs: 5
+  evidence_encoder: tfidf_svd_l2_v1
+  evidence_dim: 128
+  max_evidence_per_poi: 20
+  top_k: 5
+  temperature: 0.2
+  redundancy_weight: 0.2
+  evidence_dropout: 0.1
+  redundancy_loss_weight: 0.1
+  sensitivity_loss_weight: 0.01
+  evidence_learning_rate: 0.001
+
+reported_metrics:
+  baseline:
+    hr_at_20: 0.7002558933002482
+    map_at_20: 0.31703574630967724
+    ndcg_at_20: 0.40556779620002775
+    mrr: 0.31946851058888986
+  ier_stage1:
+    hr_at_20: 0.7002558933002482
+    map_at_20: 0.3173703480377657
+    ndcg_at_20: 0.4058318824383187
+    mrr: 0.31980183630029935

@@ -1,0 +1,17 @@
+{
+  "valid": {
+    "recall@10": 0.030032594865001483,
+    "recall@20": 0.045475937320248905,
+    "ndcg@10": 0.015659867481252164,
+    "ndcg@20": 0.01954621071405755,
+    "users": 57371
+  },
+  "test": {
+    "recall@10": 0.02579936155738134,
+    "recall@20": 0.03994627313482303,
+    "ndcg@10": 0.013258922898667341,
+    "ndcg@20": 0.016793040516962347,
+    "users": 57327
+  },
+  "protocol": "Full ranking over warm training items; training-seen items excluded per user; strict_time_only=True."
+}
